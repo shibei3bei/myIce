@@ -1,0 +1,52 @@
+{
+  "name": "wocloud-framework-child-app",
+  "version": "3.0.2",
+  "description": "沃云框架子应用",
+  "dependencies": {
+    "@ice/stark-app": "^1.2.0",
+    "@ice/store": "^0.4.7",
+    "@ice/store-logger": "^0.1.0",
+    "@icedesign/container": "^1.0.4",
+    "@wocloud/design": "^0.2.4",
+    "@wocloud/utils": "^0.1.2",
+    "babel-plugin-transform-jsx-list": "^0.1.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "moment": "^2.24.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.2",
+    "url-parse": "^1.4.7"
+  },
+  "devDependencies": {
+    "@ice/spec": "^0.1.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.0.1",
+    "ice-plugin-modular-import": "^0.1.0",
+    "ice-plugin-moment-locales": "^0.1.0",
+    "ice-scripts": "^2.0.0",
+    "stylelint": "^10.1.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development ice-scripts dev",
+    "build": "cross-env NODE_ENV=production ice-scripts build --analyzer",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "stylelint": "stylelint ./**/*.scss",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx ./ && stylelint --fix --cache **/*.less --syntax less & npm run prettier"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-react-v3"
+  },
+  "ideMode": {
+    "name": "ice-react"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/react-materials/tree/master/scaffolds/ice-stark-child"
+  }
+}
